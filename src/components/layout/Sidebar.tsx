@@ -87,9 +87,11 @@ const AppSidebar: React.FC<SidebarProps> = ({ onClose }) => {
       <SidebarHeader className="px-4 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">
-            M
+            {isPatient ? 'M' : (currentUser.first_name?.charAt(0) || 'D') + (currentUser.last_name?.charAt(0) || 'R')}
           </div>
-          <span className="text-primary text-lg font-bold">MediConnect</span>
+          <span className="text-primary text-lg font-bold">
+            {isPatient ? 'MediConnect' : currentUser.name || `Dr. ${currentUser.first_name || ''} ${currentUser.last_name || ''}`.trim()}
+          </span>
         </div>
         {onClose && (
           <Button 

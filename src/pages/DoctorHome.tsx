@@ -45,7 +45,6 @@ const DoctorHome: React.FC<DoctorHomeProps> = ({ section }) => {
 
   const menuItems = [
     { name: 'Dashboard', icon: <Stethoscope className="h-5 w-5" />, path: 'dashboard' },
-    { name: 'Patients', icon: <Users className="h-5 w-5" />, path: 'patients' },
     { name: 'Appointments', icon: <Calendar className="h-5 w-5" />, path: 'appointments' },
     { name: 'Chat', icon: <MessageSquare className="h-5 w-5" />, path: 'chat' },
     { name: 'Alerts', icon: <Bell className="h-5 w-5" />, path: 'healthcare-alerts' },
@@ -56,8 +55,6 @@ const DoctorHome: React.FC<DoctorHomeProps> = ({ section }) => {
     switch (currentSection) {
       case 'dashboard':
         return <DoctorDashboard />;
-      case 'patients':
-        return <PatientList />;
       case 'appointments':
         return <AppointmentCalendar />;
       case 'chat':
