@@ -223,6 +223,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onForgotPassword }) => {
                   <>Login <LockIcon className="ml-2 h-4 w-4" /></>
                 )}
               </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full mt-4"
+                onClick={() => navigate('/register')}
+              >
+                Create Account
+              </Button>
             </div>
           </form>
         </TabsContent>
@@ -282,6 +290,14 @@ const LoginForm: React.FC<LoginFormProps> = ({ onForgotPassword }) => {
                 ) : (
                   <>Login <LockIcon className="ml-2 h-4 w-4" /></>
                 )}
+              </Button>
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full mt-4"
+                onClick={() => navigate('/register')}
+              >
+                Create Account
               </Button>
             </div>
           </form>
